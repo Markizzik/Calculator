@@ -1,5 +1,7 @@
 from fastapi import FastAPI
-app = FastAPI()
+app = FastAPI(
+    title = "Calculator"
+)
 @app.get("/sum")
 def sum(a: int, b: int):
     """Сложение"""
@@ -19,6 +21,6 @@ def multiplication(a: int, b: int):
 def division(a: int, b: int):
     """ Деление"""
     if b == 0:
-        return "Ахтунг!!! Делить на 0 нельзя!"
+        return "Делить на 0 нельзя!"
     else:
         return a / b
