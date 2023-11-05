@@ -19,7 +19,7 @@ def multiplication(a: int, b: int):
 
 @app.get("/division")
 def division(a: int, b: int):
-    """ Деление"""
+    """Деление"""
     if b == 0:
         return "Делить на 0 нельзя!"
     else:
